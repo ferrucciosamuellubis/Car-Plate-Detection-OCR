@@ -1,0 +1,6 @@
+train: E:/Kuntal/project_idea/my_Projects/Car Plate Detection/Dataset/train/images
+val: E:/Kuntal/project_idea/my_Projects/Car Plate Detection/Dataset/valid/images
+test: E:/Kuntal/project_idea/my_Projects/Car Plate Detection/Dataset/test/images
+
+nc: 1
+names: ['Plates']
