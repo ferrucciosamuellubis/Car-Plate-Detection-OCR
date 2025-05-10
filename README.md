@@ -1,68 +1,67 @@
-Car Plate Detection & OCR
 
-📌 Project Overview
-This project uses YOLO (You Only Look Once) for car plate detection and PaddleOCR for optical character recognition (OCR) to extract text from detected license plates. It provides a Streamlit-based web interface for users to upload images, detect plates, and extract text.
 
-🔥 Features
-🚗 Car Plate Detection using YOLOv8 model.
+https://github.com/user-attachments/assets/7c9ac2ab-a9ab-418e-a9e3-469acf15df1d
 
-🔍 OCR Processing using PaddleOCR.
 
-🖼 Annotated & Cropped Image Saving.
 
-🌐 Streamlit Web App for user interaction.
+# Car Plate Detection and OCR Extraction
 
-📄 CSV Output of extracted text.
+A Streamlit-based application that detects car plates using YOLO and extracts text from the plates using PaddleOCR.
 
-🛠 Installation & Setup
-1️⃣ Clone the Repository
-bash
-git clone https://github.com/yourusername/car-plate-detection.git
-cd car-plate-detection
-2️⃣ Create Virtual Environment
-bash
-python -m venv myenv
-source myenv/bin/activate  # On macOS/Linux
-myenv\Scripts\activate  # On Windows
-3️⃣ Install Dependencies
-bash
-pip install -r requirements.txt
-4️⃣ Download YOLO Model
-Download your trained YOLO model best.pt and place it in the project directory.
+## Features
+- **YOLO-based car plate detection**: Detects number plates from images.
+- **OCR extraction**: Reads text from detected plates using PaddleOCR.
+- **Annotated image display**: Shows processed images with bounding boxes.
+- **Text overlay on images**: Displays extracted text on images.
+- **Results export**: Saves OCR results as a CSV file.
 
-🚀 Running the Application
-Run the Streamlit web app:
+## Installation
+Ensure you have Python installed, then install dependencies:
 
-bash
+```bash
+pip install streamlit opencv-python pandas ultralytics paddleocr numpy
+```
+
+## Usage
+Run the Streamlit app:
+
+```bash
 streamlit run app.py
-Once started, open the localhost link displayed in the terminal and upload an image for plate detection.
+```
 
-📂 Project Structure
-car-plate-detection/
-│── best.pt                # YOLO model file
-│── requirements.txt        # Dependencies
-│── app.py                  # Streamlit Web App
-│── Sample_Images/         # Test images for detection
-│── results/
-│   ├── annotation_output/   # YOLO detection annotations
-│   ├── cropped_img_folder/  # Cropped plates
-│   ├── result_folder/       # OCR results
-│   ├── final_output_folder/ # Final processed images
-└── README.md               # Project Documentation
-⚡ Example Output
-Image Name	Extracted Text
-car1.jpg	WB04A1234
-car2.jpg	MH12AB3456
-💡 Future Improvements
-Enhance OCR accuracy with better preprocessing.
+### Steps:
+1. Upload the YOLO model (`.pt` file).
+2. Provide the image folder path.
+3. Process images to detect plates and extract text.
+4. View annotated images and extracted text.
+5. Export results as a CSV file.
 
-Add multiple language support for license plates.
+## Project Structure
+```
+├── app.py                    # Streamlit app
+├── result
+│   ├── annotation_output      # Annotated images
+│   ├── cropped_img_folder     # Cropped plate images
+│   ├── result_folder          # Processed results
+│   ├── final_output_folder    # Final output images
+│   ├── ocr_results.csv        # Extracted text results
+```
 
-Integrate a database to store vehicle details.
+## Example Output
+Annotated images with bounding boxes:
 
-🏆 Credits & Acknowledgments
-YOLOv8 for car plate detection.
+![Annotated Example](example_annotated.jpg)
 
-PaddleOCR for text recognition.
+Extracted text overlaid on image:
 
-Streamlit for the web interface.
+![Final Output Example](example_final.jpg)
+
+## Contributing
+Feel free to fork, improve, and submit pull requests!
+
+## License
+This project is licensed under the MIT License.
+
+---
+
+This README should help users understand how to install, use, and contribute to your project! Would you like any modifications? 🚀
