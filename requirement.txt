@@ -4,7 +4,7 @@
 streamlit
 
 # Pustaka untuk pemrosesan gambar (menyediakan modul cv2)
-opencv-python
+opencv-python-headless
 
 # Pustaka untuk operasi numerik, sering digunakan bersama OpenCV
 numpy
