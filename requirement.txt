@@ -1,1 +1,14 @@
+# requirements.txt
+
+# Pustaka wajib untuk Streamlit
+streamlit
+
+# Pustaka untuk pemrosesan gambar (menyediakan modul cv2)
 opencv-python
+
+# Pustaka untuk operasi numerik, sering digunakan bersama OpenCV
+numpy
+
+# Mungkin diperlukan juga untuk OCR (tambahkan jika Anda menggunakannya)
+easyocr
+pytesseract
